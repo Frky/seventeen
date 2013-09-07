@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'primes/css/style.css' %}" />
+
+    <script src="{% static 'primes/js/jquery-2.0.3.min.js' %}"></script>
+    <script src="{% static 'primes/js/main.js' %}"></script>
+
+</head>
+
+<body>
+
+    <header>
+        S<span class="e">e</span>v<span class="e">e</span>nt<span class="e">e</span><span class="e">e</span>n
+    </header>
+
+    <div class="flip-container">
+        <div class="today-prime">
+            <div class="front">
+                <div class="half left" style="background-color: {{ dprime.backcolor }};">
+                    <div class="number">
+                        {{ dprime.value }}
+                    </div>
+                </div>
+                <div class="half right" style="background-color: {{ dprime.frontcolor }};">
+                    <div class="number">
+                        {{ dprime.proba }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="half right" style="background-color: {{ dprime.backcolor }};">
+                    <div class="text">
+                        Probability to be prime
+                    </div>
+                </div>
+                <div class="half left" style="background-color: {{ dprime.frontcolor }};">
+                    <div class="text">
+                         Probably-prime number of the day
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="menu-element" id="concept">
+            <div class="vcontainer">
+                <div class="front">
+                    concept
+                </div>
+                <div class="back">
+                    concept
+                </div>
+            </div>
+        </div>
+        <div class="menu-element" id="credits">
+            <div class="hcontainer">
+                <div class="front">
+                    credits
+                </div>
+                <div class="back">
+                    credits
+                </div>
+            </div>
+        </div>
+        <div class="menu-element" id="history">
+            <div class="vcontainer">
+                <div class="front" style="background-color: {{ p.frontcolor }};">
+                    history
+                </div>
+                <div class="back" style="background-color: {{ p.backcolor }};">
+                    ->
+                </div>
+            </div>
+        </div>
+    
+        {% for p in primes %}
+        <div class="old-prime">
+            {% if forloop.counter0|divisibleby:2 %}
+            <div class="hcontainer">
+                {% else %}
+                <div class="vcontainer">
+                {% endif %}
+                    <div class="front" style="background-color: {{ p.frontcolor }};">
+                        {{ p.value }}
+                    </div>
+                    <div class="back" style="background-color: {{ p.backcolor }};">
+                        {{ p.proba }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,300 @@
+
+/* Flat UI colors */
+$turquoise: #1abc9c;
+$green-sea: #16a085;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+
+$sun-flower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+
+@font-face {
+    font-family: santor;
+    src: url('../fonts/santor.otf');
+
+}
+
+body {
+
+    background-color: $turquoise; 
+
+    font-family: santor;
+
+}
+
+header {
+    font-size: 3em;
+}
+
+.e {
+    color: $green-sea;
+}
+
+/* Daily prime */
+    
+$size: 400px;
+
+.flip-container {
+    width: $size;
+    height: $size;
+
+    margin: auto;
+
+    -webkit-perspective: 1000;
+       -moz-perspective: 1000;
+            perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .front .half.left, .flip-container.flip .front .half.left {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+
+}
+
+.flip-container:hover .back .half.right, .flip-container.flip .back .half.right { //, .flip-container:hover .back .half.right {
+    -webkit-transform: rotateY(0deg);
+       -moz-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            
+
+}
+
+div.today-prime {
+        
+    position: relative;
+   
+    border-style: solid 0px black;
+    border-radius: $size / 2;
+
+    margin: auto;
+    margin-top: 50px;
+
+    text-align: center;
+
+    .front, .back {
+
+        width: $size;
+        height: $size;
+
+        border-style: solid 0px black;
+        border-radius: $size / 2;
+
+    }
+
+    .front, .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .half {
+        height: $size;
+        width: $size/2;
+
+        display: table; 
+    }
+
+    .text, .number {
+        display: table-cell; 
+        vertical-align: middle;
+        line-height: 30px;
+    }
+
+    .left .text {
+        text-align: right;
+        padding-left: 20px;
+        padding-right: 10px;
+    }  
+
+    .right .text {
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .front {
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            border-radius: $size/2 0px 0px $size/2;
+        
+            -webkit-transform-style: preserve-3d;
+               -moz-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+            -webkit-transition: 0.6s;
+               -moz-transition: 0.6s;
+                    transition: 0.6s;
+            -webkit-transform-origin: $size/2 0px;
+               -moz-transform-origin: $size/2 0px;
+                    transform-origin: $size/2 0px;
+            -webkit-backface-visibility: hidden;
+               -moz-backface-visibility: hidden;
+                    backface-visibility: hidden;
+        }
+
+        .right {
+            border-radius: 0px $size/2 $size/2 0px;
+
+            position: absolute;
+            top: 0;
+            left: $size/2;
+        }
+    }
+
+    .back {
+        position: absolute;
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            border-radius: $size/2 0px 0px $size/2;
+        }
+
+        .right {
+            position: absolute;
+            top: 0;
+            left: $size/2;
+
+            border-radius: 0px $size/2 $size/2 0px;
+            background-color: $pomegranate;
+
+            -webkit-transform: rotateY(-180deg);
+               -moz-transform: rotateY(-180deg);
+                    transform: rotateY(-180deg);
+            -webkit-transition: 0.6s;
+               -moz-transition: 0.6s;
+                    transition: 0.6s;
+            -webkit-transform-origin: 0px 0px;
+               -moz-transform-origin: 0px 0px;
+                    transform-origin: 0px 0px;
+            
+        }
+    }
+
+}
+
+.content {
+    width: 70%;
+
+    margin: auto;
+    margin-top: 50px;
+}
+
+.menu-element:hover {
+    cursor: pointer;
+}
+
+.old-prime:hover .hcontainer, .menu-element:hover .hcontainer {
+        -webkit-transform: rotateY(180deg);
+           -moz-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+}
+
+.old-prime:hover .vcontainer, .menu-element:hover .vcontainer {
+        -webkit-transform: rotateX(-180deg);
+           -moz-transform: rotateX(-180deg);
+                transform: rotateX(-180deg);
+}
+
+.old-prime, .menu-element {
+
+    margin: 10px;
+    display: inline-block;
+
+    $size: 70px;
+        
+    height: $size;
+    width: $size;
+
+    position: relative;
+
+    -webkit-perspective: 1000;
+       -moz-perspective: 1000;
+            perspective: 1000;
+
+    .front, .back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        height: $size;
+        width: $size;
+
+        line-height: $size;
+        text-align: center;
+
+        border-radius: $size;
+
+    }
+
+    .vcontainer, .hcontainer {
+            -webkit-transition: 0.6s;
+               -moz-transition: 0.6s;
+                    transition: 0.6s;
+            -webkit-transform-style: preserve-3d;
+               -moz-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+    }
+
+    .vcontainer {
+        -webkit-transform-origin: 100% $size/2;
+           -moz-transform-origin: 100% $size/2;
+                transform-origin: 100% $size/2;
+    }
+
+    .front {
+        z-index: 2;
+        -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+
+    .hcontainer .back {
+        -webkit-transform: rotateY(180deg);
+           -moz-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+
+    .vcontainer .back {
+        z-index: 1;
+        -webkit-transform: rotateX(180deg);
+           -moz-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+        -webkit-backface-visibility: hidden;
+           -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+
+}
+
