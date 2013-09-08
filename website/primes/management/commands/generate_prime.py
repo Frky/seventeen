@@ -6,6 +6,10 @@ from random import seed, randint
 
 from primes import colors
 
+import twitter
+import tweepy
+
+
 class Command(BaseCommand):
     help = 'Generate a new probably-prime number'
 
@@ -61,7 +65,13 @@ class Command(BaseCommand):
                             backcolor=colors.flat_ui_colors[randint(0, len(colors.flat_ui_colors) - 1)]
                 )
         newPrime.save()
-    
+        
+        auth = tweepy.OAuthHandler(twitter.consumer_key, twitter.consumer_secret)
+        auth.set_access_token(twitter.access_token, twitter.access_token_secret)
+
+        api = tweepy.API(auth)
+        api.update_status('Probably-prime number of the day : {0} is prime with {1}% probability.'.format(n, proba))
+
         return
 
 
