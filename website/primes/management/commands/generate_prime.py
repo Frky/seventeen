@@ -70,7 +70,7 @@ class Command(BaseCommand):
         auth.set_access_token(twitter.access_token, twitter.access_token_secret)
 
         api = tweepy.API(auth)
-        api.update_status('Probably-prime number of the day : {0} is prime with {1}% probability.'.format(n, proba))
+        api.update_status('Probably-prime number of the day: {0} is prime with {1}% probability.'.format(n, proba))
 
         return
 
