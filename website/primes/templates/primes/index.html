@@ -28,7 +28,7 @@
                 </div>
                 <div class="half right" style="background-color: {{ dprime.frontcolor }};">
                     <div class="number">
-                        {{ dprime.proba }}
+                        {{ dprime.proba }}%
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                         {{ p.value }}
                     </div>
                     <div class="back" style="background-color: {{ p.backcolor }};">
-                        {{ p.proba }}
+                        {{ p.proba }}{% if p.proba != "N.C." %}%{% endif %}
                     </div>
                 </div>
             </div>

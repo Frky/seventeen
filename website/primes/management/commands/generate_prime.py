@@ -15,7 +15,7 @@ class Command(BaseCommand):
     
         is_probably_prime = False
     
-        k = 1000
+        k = randint(0,6)
     
         while not is_probably_prime:
             n = 0
@@ -50,8 +50,13 @@ class Command(BaseCommand):
             if not is_not_prime:
                 is_probably_prime = True
     
+        if k == 0:
+            proba = 50
+        else:
+            proba = round((1-0.25**k)*100, 2)
         seed(n)
-        newPrime = Prime(value=n, 
+        newPrime = Prime(value=n,
+                            proba=proba,
                             frontcolor=colors.flat_ui_colors[randint(0, len(colors.flat_ui_colors) - 1)],
                             backcolor=colors.flat_ui_colors[randint(0, len(colors.flat_ui_colors) - 1)]
                 )
