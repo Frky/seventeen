@@ -27,10 +27,16 @@ $silver: #bdc3c7;
 $concrete: #95a5a6;
 $asbestos: #7f8c8d;
 
+/* Main font */
 @font-face {
     font-family: santor;
     src: url('../fonts/santor.otf');
+}
 
+/* Font for twitter icon */
+@font-face {
+    font-family: social;
+    src: url('../fonts/social_icons.ttf');
 }
 
 body {
@@ -298,3 +304,14 @@ div.today-prime {
 
 }
 
+#twitter {
+
+    font-family: social;
+    font-size: 2.5em;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+}

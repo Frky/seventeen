@@ -1,27 +1,34 @@
 /* Flat UI colors */
+/* Main font */
 @font-face {
   font-family: santor;
   src: url("../fonts/santor.otf");
 }
 
-/* line 36, ../scss/style.scss */
+/* Font for twitter icon */
+@font-face {
+  font-family: social;
+  src: url("../fonts/social_icons.ttf");
+}
+
+/* line 42, ../scss/style.scss */
 body {
   background-color: #1abc9c;
   font-family: santor;
 }
 
-/* line 44, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 header {
   font-size: 3em;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 54, ../scss/style.scss */
 .e {
   color: #16a085;
 }
 
 /* Daily prime */
-/* line 56, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .flip-container {
   width: 400px;
   height: 400px;
@@ -32,21 +39,21 @@ header {
 }
 
 /* flip the pane when hovered */
-/* line 68, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 .flip-container:hover .front .half.left, .flip-container.flip .front .half.left {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 75, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 .flip-container:hover .back .half.right, .flip-container.flip .back .half.right {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 
-/* line 83, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
 div.today-prime {
   position: relative;
   border-style: solid 0px black;
@@ -55,44 +62,44 @@ div.today-prime {
   margin-top: 50px;
   text-align: center;
 }
-/* line 95, ../scss/style.scss */
+/* line 101, ../scss/style.scss */
 div.today-prime .front, div.today-prime .back {
   width: 400px;
   height: 400px;
   border-style: solid 0px black;
   border-radius: 200px;
 }
-/* line 105, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 div.today-prime .front, div.today-prime .back {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 112, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 div.today-prime .half {
   height: 400px;
   width: 200px;
   display: table;
 }
-/* line 119, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 div.today-prime .text, div.today-prime .number {
   display: table-cell;
   vertical-align: middle;
   line-height: 30px;
 }
-/* line 125, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 div.today-prime .left .text {
   text-align: right;
   padding-left: 20px;
   padding-right: 10px;
 }
-/* line 131, ../scss/style.scss */
+/* line 137, ../scss/style.scss */
 div.today-prime .right .text {
   text-align: left;
   padding-left: 10px;
   padding-right: 20px;
 }
-/* line 139, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 div.today-prime .front .left {
   position: absolute;
   top: 0;
@@ -112,25 +119,25 @@ div.today-prime .front .left {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 161, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 div.today-prime .front .right {
   border-radius: 0px 200px 200px 0px;
   position: absolute;
   top: 0;
   left: 200px;
 }
-/* line 170, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 div.today-prime .back {
   position: absolute;
 }
-/* line 173, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 div.today-prime .back .left {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 200px 0px 0px 200px;
 }
-/* line 181, ../scss/style.scss */
+/* line 187, ../scss/style.scss */
 div.today-prime .back .right {
   position: absolute;
   top: 0;
@@ -148,33 +155,33 @@ div.today-prime .back .right {
   transform-origin: 0px 0px;
 }
 
-/* line 204, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 .content {
   width: 70%;
   margin: auto;
   margin-top: 50px;
 }
 
-/* line 211, ../scss/style.scss */
+/* line 217, ../scss/style.scss */
 .menu-element:hover {
   cursor: pointer;
 }
 
-/* line 215, ../scss/style.scss */
+/* line 221, ../scss/style.scss */
 .old-prime:hover .hcontainer, .menu-element:hover .hcontainer {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 221, ../scss/style.scss */
+/* line 227, ../scss/style.scss */
 .old-prime:hover .vcontainer, .menu-element:hover .vcontainer {
   -webkit-transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
 }
 
-/* line 227, ../scss/style.scss */
+/* line 233, ../scss/style.scss */
 .old-prime, .menu-element {
   margin: 10px;
   display: inline-block;
@@ -185,7 +192,7 @@ div.today-prime .back .right {
   -moz-perspective: 1000;
   perspective: 1000;
 }
-/* line 243, ../scss/style.scss */
+/* line 249, ../scss/style.scss */
 .old-prime .front, .old-prime .back, .menu-element .front, .menu-element .back {
   position: absolute;
   top: 0px;
@@ -196,7 +203,7 @@ div.today-prime .back .right {
   text-align: center;
   border-radius: 70px;
 }
-/* line 258, ../scss/style.scss */
+/* line 264, ../scss/style.scss */
 .old-prime .vcontainer, .old-prime .hcontainer, .menu-element .vcontainer, .menu-element .hcontainer {
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -205,20 +212,20 @@ div.today-prime .back .right {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 267, ../scss/style.scss */
+/* line 273, ../scss/style.scss */
 .old-prime .vcontainer, .menu-element .vcontainer {
   -webkit-transform-origin: 100% 35px;
   -moz-transform-origin: 100% 35px;
   transform-origin: 100% 35px;
 }
-/* line 273, ../scss/style.scss */
+/* line 279, ../scss/style.scss */
 .old-prime .front, .menu-element .front {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 280, ../scss/style.scss */
+/* line 286, ../scss/style.scss */
 .old-prime .hcontainer .back, .menu-element .hcontainer .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -227,7 +234,7 @@ div.today-prime .back .right {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 289, ../scss/style.scss */
+/* line 295, ../scss/style.scss */
 .old-prime .vcontainer .back, .menu-element .vcontainer .back {
   z-index: 1;
   -webkit-transform: rotateX(180deg);
@@ -236,4 +243,15 @@ div.today-prime .back .right {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* line 307, ../scss/style.scss */
+#twitter {
+  font-family: social;
+  font-size: 2.5em;
+}
+/* line 312, ../scss/style.scss */
+#twitter a {
+  text-decoration: none;
+  color: black;
 }
