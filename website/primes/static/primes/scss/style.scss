@@ -35,8 +35,14 @@ $asbestos: #7f8c8d;
 
 /* Font for twitter icon */
 @font-face {
-    font-family: social;
+    font-family: socialtt;
     src: url('../fonts/social_icons.ttf');
+}
+
+/* Font for github icon */
+@font-face {
+    font-family: socialgh;
+    src: url('../fonts/social_font.ttf');
 }
 
 body {
@@ -309,14 +315,24 @@ div.today-prime {
 
 }
 
-#twitter {
-
-    font-family: social;
+.social {
+    
     font-size: 2.5em;
-
+    
     a {
         text-decoration: none;
         color: black;
+    }
+
+    #twitter {
+
+        font-family: socialtt;
+    } 
+
+    #github {
+
+        font-family: socialgh;
+    
     }
 
 }
