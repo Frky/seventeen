@@ -223,13 +223,13 @@ div.today-prime {
     cursor: pointer;
 }
 
-.old-prime:hover .hcontainer, .menu-element:hover .hcontainer {
+.hrotation {
         -webkit-transform: rotateY(180deg);
            -moz-transform: rotateY(180deg);
                 transform: rotateY(180deg);
 }
 
-.old-prime:hover .vcontainer, .menu-element:hover .vcontainer {
+.vrotation {
         -webkit-transform: rotateX(-180deg);
            -moz-transform: rotateX(-180deg);
                 transform: rotateX(-180deg);
@@ -267,9 +267,9 @@ div.today-prime {
     }
 
     .vcontainer, .hcontainer {
-            -webkit-transition: 0.6s;
-               -moz-transition: 0.6s;
-                    transition: 0.6s;
+            -webkit-transition: 0.8s;
+               -moz-transition: 0.8s;
+                    transition: 0.8s;
             -webkit-transform-style: preserve-3d;
                -moz-transform-style: preserve-3d;
                     transform-style: preserve-3d;

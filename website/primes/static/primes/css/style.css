@@ -4,13 +4,11 @@
   font-family: santor;
   src: url("../fonts/santor.otf");
 }
-
 /* Font for twitter icon */
 @font-face {
   font-family: social;
   src: url("../fonts/social_icons.ttf");
 }
-
 /* line 42, ../scss/style.scss */
 body {
   background-color: #1abc9c;
@@ -172,21 +170,21 @@ div.today-prime .back .right {
   cursor: pointer;
 }
 
-/* line 226, ../scss/style.scss */
-.old-prime:hover .hcontainer, .menu-element:hover .hcontainer {
+/* line 227, ../scss/style.scss */
+.hrotation {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 232, ../scss/style.scss */
-.old-prime:hover .vcontainer, .menu-element:hover .vcontainer {
+/* line 234, ../scss/style.scss */
+.vrotation {
   -webkit-transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
 }
 
-/* line 238, ../scss/style.scss */
+/* line 240, ../scss/style.scss */
 .old-prime, .menu-element {
   margin: 10px;
   display: inline-block;
@@ -197,7 +195,7 @@ div.today-prime .back .right {
   -moz-perspective: 1000;
   perspective: 1000;
 }
-/* line 254, ../scss/style.scss */
+/* line 256, ../scss/style.scss */
 .old-prime .front, .old-prime .back, .menu-element .front, .menu-element .back {
   position: absolute;
   top: 0px;
@@ -208,29 +206,29 @@ div.today-prime .back .right {
   text-align: center;
   border-radius: 70px;
 }
-/* line 269, ../scss/style.scss */
+/* line 271, ../scss/style.scss */
 .old-prime .vcontainer, .old-prime .hcontainer, .menu-element .vcontainer, .menu-element .hcontainer {
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  transition: 0.8s;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 278, ../scss/style.scss */
+/* line 280, ../scss/style.scss */
 .old-prime .vcontainer, .menu-element .vcontainer {
   -webkit-transform-origin: 100% 35px;
   -moz-transform-origin: 100% 35px;
   transform-origin: 100% 35px;
 }
-/* line 284, ../scss/style.scss */
+/* line 286, ../scss/style.scss */
 .old-prime .front, .menu-element .front {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 291, ../scss/style.scss */
+/* line 293, ../scss/style.scss */
 .old-prime .hcontainer .back, .menu-element .hcontainer .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -239,7 +237,7 @@ div.today-prime .back .right {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 300, ../scss/style.scss */
+/* line 302, ../scss/style.scss */
 .old-prime .vcontainer .back, .menu-element .vcontainer .back {
   z-index: 1;
   -webkit-transform: rotateX(180deg);
@@ -250,12 +248,12 @@ div.today-prime .back .right {
   backface-visibility: hidden;
 }
 
-/* line 312, ../scss/style.scss */
+/* line 314, ../scss/style.scss */
 #twitter {
   font-family: social;
   font-size: 2.5em;
 }
-/* line 317, ../scss/style.scss */
+/* line 319, ../scss/style.scss */
 #twitter a {
   text-decoration: none;
   color: black;

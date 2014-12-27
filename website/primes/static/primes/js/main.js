@@ -53,6 +53,40 @@ $( document ).ready(function() {
         }, 300);
     }
 
+    /* Binding hover functions to each old prime */
+    $(".old-prime").each(function() {
+        /* Function when mouse is over */
+        $(this).hover(function() {
+            /* Add corresponding class for css rotation */
+            /* For vertical rotation (around X) */
+            $(".vcontainer", this).each(function() {
+                $(this).addClass("vrotation");
+            });
+            /* For horizontal rotation (around Y) */
+            $(".hcontainer", this).each(function() {
+                $(this).addClass("hrotation");
+            });
+        });
+        /* Function when the mouse leaves the prime div */
+        $(this).mouseleave(function() {
+            /* Add corresponding class for css rotation */
+            /* For vertical rotation (around X) */
+            $(".vcontainer", this).each(function() {
+                var el = $(this);
+                setTimeout(function() {
+                    el.removeClass("vrotation");
+                }, 800);
+            });
+            /* For horizontal rotation (around Y) */
+            $(".hcontainer", this).each(function() {
+                var el = $(this);
+                setTimeout(function() {
+                    el.removeClass("hrotation");
+                }, 800);
+            });
+        });
+    });
+
     /* Listener on "concept" menu item */
     $( ".menu-element#concept" ).hover(function () { menu_element_in(concept_left, concept_right) }, menu_element_out);
     /* Listener on "credits" menu item */
