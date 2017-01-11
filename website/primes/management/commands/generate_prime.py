@@ -55,7 +55,7 @@ class Command(BaseCommand):
                 is_probably_prime = True
     
         if k == 0:
-            proba = 50
+            proba = 23.98
         else:
             proba = round((1-0.25**k)*100, 2)
         seed(n)
